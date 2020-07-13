@@ -9,15 +9,15 @@
 }
 
 body {
-    background-color: var(--lightbrown);
+    /* background-color: var(--lightbrown); */
     font-family: 'Karla', sans-serif;
 }
 
 /* #nav {
     background-color: var(--greygreen);
 } */
-/* .bg-light {
-    background-color: var(--lightbrown);
+/* nav.bg-light {
+    background-color: var(--brown)!important;
 } */
 
 .navbar a {
