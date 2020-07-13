@@ -10,9 +10,11 @@ app.use(express.static(__dirname + "/public"));
 // ----- Views EJS -----
 app.set("view engine", "ejs");
 // ----- Routes -----
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
+app.use("/", require("./controllers/index"));
+
 // PORT
 
 const PORT = process.env.PORT || 4000;
