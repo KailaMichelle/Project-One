@@ -17,4 +17,8 @@ router.get("/login", (req, res) => {
 //TODO  contacts
 //TODO  /resources
 
+router.get('/resources', (req, res) => {
+    res.render('resources/index');
+  });
+
 module.exports = router;

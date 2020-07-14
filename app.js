@@ -6,7 +6,7 @@ const connectDb = require("./models/index");
 
 // ! Config's
 dotenv.config({ path: "./config/.env" });
-require("./config/passort")(passport); //argument is the passport we required
+require("./config/passport")(passport); //argument is the passport we required
 
 //! Server + DB Inits
 const app = express();
