@@ -3,6 +3,9 @@
 const express = require("express");
 const router = express.Router();
 
+// required db -Kaila
+const db = require('../models');
+
 router.get("/", (req, res) => {
   res.render("index");
 });
@@ -16,9 +19,5 @@ router.get("/login", (req, res) => {
 //TODO user/index.ejs
 //TODO  contacts
 //TODO  /resources
-
-router.get('/resources', (req, res) => {
-    res.render('resources/index');
-  });
 
 module.exports = router;
