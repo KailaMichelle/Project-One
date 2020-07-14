@@ -16,5 +16,13 @@ router.get(
     res.redirect("/dashboard"); // ! if sucess redirect to user/dashboard ***
   }
 );
+// * Log Out User Route:: /auth/logout
+router.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/"); // To homepage
+});
+
+//? with the passport middleware once we log in we will have log out method
+// ? in request object so we can just call that
 
 module.exports = router;

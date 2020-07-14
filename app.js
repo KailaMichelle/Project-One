@@ -1,8 +1,10 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const passport = require("passport");
 const session = require("express-session");
 const connectDb = require("./models/index");
+const MongoStore = require("connect-mongo")(session);
 
 //* ----- Config's -----
 dotenv.config({ path: "./config/.env" });
@@ -19,8 +21,8 @@ app.use(
   session({
     secret: "WebApp",
     resave: false, // if nothing changed in session don't save
-    saveUninitialized: false, // don't create a session until something is stored
-    //? later a store value will be here to store user in mongo
+    saveUninitialized: false, // don't create a session until something is store
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
 //* Passport Middleware
@@ -31,9 +33,9 @@ app.use(passport.session());
 app.use(express.static(__dirname + "/public"));
 
 //* ----- Routes -----
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 app.use("/", require("./controllers/index"));
 //* Auth Routes
 app.use("/auth", require("./controllers/auth"));

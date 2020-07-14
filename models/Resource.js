@@ -13,10 +13,13 @@ const ResourceSchema = new mongoose.Schema(
     link: {
       type: String,
     },
+    user: {
+      ref: "User",
+    },
   },
   { timestamps: true }
 );
-//!was userSchema
-const Resource = mongoose.model("Resource", ResourceSchema);
+
+const Resource = mongoose.model("Resource", UserSchema);
 
 module.exports = Resource;
