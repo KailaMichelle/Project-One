@@ -2,25 +2,25 @@ const mongoose = require('mongoose')
 
 const resourceSchema = new mongoose.Schema(
   {
-    type: {
+    name: {
       type: String,
-      required: true
     },
     description: {
       type: String,
-      required: true
+      required: false
     },
     link: {
       type: String
     },
-    user: {
-      ref: 'User'
-    }
+    user: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Resource'
+      }
+    ]
   },
   { timestamps: true }
 )
-
-const Resource = mongoose.model('Resource', UserSchema)
 
 const Resource = mongoose.model('Resource', resourceSchema)
 

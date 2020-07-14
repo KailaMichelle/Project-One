@@ -8,7 +8,7 @@ const connectDb = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
-    });
+    })
     console.log(`MongoDb connected : ${conn.connect.host}`);
   } catch (err) {
     console.error(err);
@@ -16,11 +16,11 @@ const connectDb = async () => {
   }
 };
 
-module.exports = connectDb;
-
 module.exports = {
   Resource: require('./Resource')
 }
+
+module.exports = connectDb;
 
 
 

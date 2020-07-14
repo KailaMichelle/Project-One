@@ -22,19 +22,20 @@ router.get('/login', ensureAuth, (req, res) => {
   })
 })
 //TODO  /resources
-router.get('/resource', ensureAuth, async (req, res) => {
-  try {
-    const resources = await Resource.find({ user: req.user.id })
-    res.render('resource', {
-      name: req.user.firstName,
-      resources
-    })
-  } catch (err) {
-    console.error(err)
-    // if something goes wrong
-    res.render('error/500')
-  }
-})
+// router.get('/resource', ensureAuth, async (req, res) => {
+//   try {
+//     const resources = await Resource.find({ user: req.user.id })
+//     res.render('resource', {
+//       name: req.user.firstName,
+//       resources
+//     })
+//   } catch (err) {
+//     console.error(err)
+//     // if something goes wrong
+//     res.render('error/500')
+//   }
+// })
+
 
 //TODO user/index.ejs
 //TODO  contacts

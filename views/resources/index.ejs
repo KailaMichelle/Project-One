@@ -20,14 +20,20 @@
 
     <div>
     <h1>User Resources</h1>
-  <% if (resource.length) { %>
     <% resource.forEach(resource => { %>
       <h4>
-          <%= resource.type %>
+          <%= resource.name %>
       </h4>
-    <% }) %>
-    <% } else { %>
-        <h4>No User Resources</h4>
+
+    <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Article</button>
+      </form>
+  
+      <a href="/resource/<%= resource._id %>/edit">
+        <button>Edit Article</button>
+      </a>
+
+      <% }) %>
     </div>
 
     </main>
