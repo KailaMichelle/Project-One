@@ -18,5 +18,9 @@ const connectDb = async () => {
 
 module.exports = connectDb;
 
+module.exports = {
+  Resource: require('./Resource')
+}
+
 
 

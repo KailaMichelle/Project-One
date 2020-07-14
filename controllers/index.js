@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
+
 //TODO from main page
 // DashBoard Route : GET
 router.get("/login", (req, res) => {
