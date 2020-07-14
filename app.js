@@ -4,17 +4,17 @@ const passport = require("passport");
 const session = require("express-session");
 const connectDb = require("./models/index");
 
-// ! Config's
+//* ----- Config's -----
 dotenv.config({ path: "./config/.env" });
-require("./config/passort")(passport); //argument is the passport we required
+require("./config/passport")(passport); //argument is the passport we required
 
-//! Server + DB Inits
+//* Server + DB Inits
 const app = express();
 connectDb();
 
-// ----- Views EJS -----
+//* ----- Views EJS -----
 app.set("view engine", "ejs");
-//! Session need to be above Passport
+//* Session Middleware (need to be above Passport)
 app.use(
   session({
     secret: "WebApp",
@@ -23,22 +23,24 @@ app.use(
     //? later a store value will be here to store user in mongo
   })
 );
-//! Passport Middleware
+//* Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-// ----- Static Path Public -----
+//* ----- Static Path Public -----
 app.use(express.static(__dirname + "/public"));
 
-// ----- Routes -----
+//* ----- Routes -----
 app.get("/", (req, res) => {
   res.render("index");
 });
 app.use("/", require("./controllers/index"));
+//* Auth Routes
+app.use("/auth", require("./controllers/auth"));
 
-// PORT
+//* PORT
 
 const PORT = process.env.PORT || 4000;
 
-// Listener
+//* Listener
 app.listen(PORT, console.log(`Sever is running on port:${PORT}`));
