@@ -4,22 +4,8 @@ const router = express.Router()
 const Resource = require('../models/Resource')
 
 
-//TODO  /resources
-// router.get('/resource', ensureAuth, async (req, res) => {
-//   try {
-//     const resources = await Resource.find({ user: req.user.id })
-//     res.render('resource', {
-//       name: req.user.firstName,
-//       resources
-//     })
-//   } catch (err) {
-//     console.error(err)
-//     // if something goes wrong
-//     res.render('error/500')
-//   }
-// })
-
-router.get('/resources', (req, res) => {
+// Resource Homepage
+router.get('/', (req, res) => {
   Resource.find({}, (err, allResources) => {
     if (err) return console.log(err);
 
@@ -31,33 +17,69 @@ router.get('/resources', (req, res) => {
   });
 });
 
-router.get('/resources/new', (req, res) => {
-    res.render('resources/new');
+// New Resource Route
+router.get('/new', (req, res) => {
+  res.render('resources/new');
+});
+
+// Show Resource
+router.get('/:id', (req, res) => {
+  Resource.findById(req.params.id, (err, showResource) => {
+    if (err) return console.log(err);
+
+    res.render('resources/show', {
+      resource: showResource,
+    });
   });
+});
 
-// router.get('/resources/:id/edit', (req, res) => {
-//     Resource.findById(req.params.id, (err, edit) => {
-//       if (err) return console.log(err);
 
-//       res.render('resources/edit', {
-//         resource: edit,
-//       });
-//     });
-//   });
+// Create Resource
+router.post('/', (req, res) => {
   
+  Resource.create(req.body, (err, newResource) => {
+    if(err) return console.log(err);
+    console.log(newResource);
 
-  
-router.post('/resources', (req, res) => {
-  
-    Resource.create(req.body, (err, newResource) => {
-      if(err) return console.log(err);
-      console.log(newResource);
+    res.redirect('resources');
+  });
+});
 
-      res.redirect('resources');
+// Edit Resource
+router.get('/:id/edit', (req, res) => {
+  Resource.findById(req.params.id, (err, edit) => {
+      if (err) return console.log(err);
+
+      res.render('resources/edit', { //referring view
+        resource: edit,
+      });
     });
   });
 
+  // Update Resource
+router.put('/:id', (req, res) => {
+    Resource.findByIdAndUpdate(
+      req.params.id, 
+      req.body,
+      {new: true},
+      (err, updateResource) => {
+        if (err) return console.log(err);
+
+        res.redirect('/resources'); //reloading the page
+      }
+    );
+  });  
+
+// Delete Resource
+router.delete('/:id', (req, res) => {
+  Resource.findByIdAndDelete(req.params.id, (err, deleteResource) => {
+      if (err) return console.log(err);
+
+      res.redirect('/resources');
+    });
+});
 
 
+  
 
 module.exports = router
