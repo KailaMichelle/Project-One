@@ -18,17 +18,18 @@
         </div>
     </div>
 
-    <div>
-    <h1>User Resources</h1>
-  <% if (resource.length) { %>
-    <% resource.forEach(resource => { %>
-      <h4>
-          <%= resource.type %>
-      </h4>
-    <% }) %>
-    <% } else { %>
-        <h4>No User Resources</h4>
-    </div>
+    <h1>New Resource</h1>
+
+    <form action="/resources" method="POST">
+        <label for="type">Type</label>
+        <input type="text" id="type" name="type"/>
+      </div>
+      <div>        
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+      </div>
+      <button type="submit">Add Resource</button>
+    </form>
 
     </main>
 

@@ -1,25 +1,27 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
-const ResourceSchema = new mongoose.Schema(
+const resourceSchema = new mongoose.Schema(
   {
     type: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: String,
-      required: true,
+      required: true
     },
     link: {
-      type: String,
+      type: String
     },
     user: {
-      ref: "User",
-    },
+      ref: 'User'
+    }
   },
   { timestamps: true }
-);
+)
 
-const Resource = mongoose.model("Resource", UserSchema);
+const Resource = mongoose.model('Resource', UserSchema)
 
-module.exports = Resource;
+const Resource = mongoose.model('Resource', resourceSchema)
+
+module.exports = Resource
