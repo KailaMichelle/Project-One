@@ -4,9 +4,11 @@ const passport = require("passport");
 const session = require("express-session");
 const connectDb = require("./models/index");
 
+const methodOverride = require('method-override'); //-Kaila
+
 // ! Config's
 dotenv.config({ path: "./config/.env" });
-require("./config/passort")(passport); //argument is the passport we required
+require("./config/passport")(passport); //argument is the passport we required
 
 //! Server + DB Inits
 const app = express();
@@ -30,10 +32,12 @@ app.use(passport.session());
 // ----- Static Path Public -----
 app.use(express.static(__dirname + "/public"));
 
+
 // ----- Routes -----
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// I don't think we need -Kaila
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 app.use("/", require("./controllers/index"));
 
 // PORT

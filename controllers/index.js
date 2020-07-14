@@ -3,6 +3,9 @@
 const express = require("express");
 const router = express.Router();
 
+// required db -Kaila
+const db = require('../models');
+
 router.get("/", (req, res) => {
   res.render("index");
 });
