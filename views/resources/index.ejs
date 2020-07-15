@@ -23,25 +23,27 @@
         </div>
     </div>
 
-    <div>
-    <h1>User Resources</h1>
-    <% resource.forEach(resource => { %>
-      <h4>
-          <a href="/resources/<%= resource._id %>">
-            <%= resource.name %>
-        </a>
-      </h4>
+        <div>
+            <h1>User Resources</h1>
+            <% resource.forEach(resource => { %>
+            <h4>
+                <a href="/resources/<%= resource._id %>">
+                <%= resource.name %>
+            </a>
+            </h4>
 
-    <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-      </form>
+            <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+            </form>
   
-      <a href="/resources/<%= resource._id %>/edit">
-        <button>Edit</button>
-      </a>
+            <a href="/resources/<%= resource._id %>/edit">
+                <button>Edit</button>
+            </a>
 
-      <% }) %>
-    </div>
+            <% }) %>
+        </div>
+
+
 
     </main>
 
