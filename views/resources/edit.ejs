@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/navbar') %>
+<!-- Main -->
+    <main>
+
+    <h1>Resource</h1>
+
+    <form action="/resources/<%= resource._id %>?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<%= resource.name %>"/>
+        
+        <label for="description">Description</label>
+        <textarea id="description" name="description"><%= resource.description %></textarea>
+      
+        <button type="submit">Update</button>
+    </form>
+
+    </main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/plugins') %>
+</body>
+</html>
