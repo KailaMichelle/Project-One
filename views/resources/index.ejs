@@ -6,22 +6,22 @@
 <!-- Main -->
     <main>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <h2>Javascript</h2>
-            </div>
-            <div class="col-md-9">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi doloremque sed necessitatibus explicabo, id numquam repellendus magni dolore consequatur dolorum, nulla illo commodi velit enim quasi dicta laborum aperiam.Enim corporis eius incidunt veritatis. Aliquid ex, ipsa et dolor similique ipsam placeat dolores quidem dicta numquam voluptate, voluptas, optio blanditiis consequuntur maiores rerum aut neque autem earum error. Velit!
-                </p>
-            </div>
-            <div class="ml-auto">
-            <a href="/resources/new">
-                <button class="btn mb-2 mt-2 btn-primary">Add Resource</button>
-              </a>
+        <div class="container-fluid" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">Resources</h2>
+                </div>
+                <div class="col-md-9">
+                    <p class="p-4">
+                        See below for our favorite resources for all things software engineering.
+                    </p> 
+                    <h4 class="p-4">
+                        <span>
+                        Any resources you'd like to <a href="/resources/new" id="resourceBtn">share?</a></span>
+                    </h4>
+                </div>
             </div>
         </div>
-    </div>
 
         <div>
             <h1>User Resources</h1>
@@ -33,11 +33,11 @@
             </h4>
 
             <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete</button>
+                <button class="button btn mb-2 mt-2" type="submit">Delete</button>
             </form>
   
             <a href="/resources/<%= resource._id %>/edit">
-                <button>Edit</button>
+                <button class="button btn mb-2 mt-2">Edit</button>
             </a>
 
             <% }) %>
