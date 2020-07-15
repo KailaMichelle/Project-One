@@ -9,33 +9,72 @@
 }
 
 body {
-    /* background-color: var(--lightbrown); */
     font-family: 'Karla', sans-serif;
+    color: #2D2D2D;
 }
 
-/* #nav {
-    background-color: var(--greygreen);
-} */
-/* nav.bg-light {
-    background-color: var(--brown)!important;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+p{
+    line-height: 30px;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.button {
+    background-color: #EEEEEE;
+}
+
+.button:hover {
+    background-color: #2D2D2D;
+    color: #F4F7F6;
+}
+
+/* .bodyText {
+    font-size: 2rem;
 } */
 
+nav.bg-light {
+    background-color: #F4F7F6 !important;
+    opacity: 0.8;
+}
+
 .navbar a {
-    color: var(--lightbrown);
+    color: #FD521F !important;
+}
+
+.navbar a:hover {
+    color: #2D2D2D !important;
 }
 
 #welcome {
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
+    color: #FD521F;
 }
 
+.blue {
+    color: #82CEED;
+}
+
+/* .picture {
+        background: url(photos/people.jpg) center center cover no-repeat fixed;
+       } */
+
 #info {
-    background-color: #e9ecef;
-    padding: 10rem 2rem;
+    background-color:#EEEEEE;
+    padding: 6rem 2rem;
+}
+
+.highlight {
+    color: #FD521F;
 }
 
 #user {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
 }
+
 
 /* form {
     border: solid black 1px;
@@ -43,12 +82,12 @@ body {
 } */
 
 #footer a {
-    color: var(--brown);
+    color: #FD521F;
     text-decoration: none;
 }
 
 #footer a:hover {
-    color: #4C5361;
+    color: #2D2D2D;
 }
 
 footer {
@@ -58,8 +97,19 @@ footer {
 }
  #userlogin {
      font-size: 10rem;
+     color: #EEEEEE;
  }
 
+#resourceBtn {
+    color: #FD521F;
+}
+
+#resourceBtn:hover {
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
+/*  
 @media (max-width: 992px) {
 
 }
@@ -68,4 +118,4 @@ footer {
 }
 @media (max-width: 576px) {
 
-}
+} */

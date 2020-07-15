@@ -5,23 +5,30 @@
     <%- include('./partials/navbar') %>
     <!-- Main -->
     <main>
-        <div class="d-flex justify-content-center align-self-center" id="welcome">
-            <h1>C(onnect) R(esources) & U(nite) D(evelopers)</h1>  
-        </div>
+            <img src="photos/people.jpg" class="img-fluid max-width: 100%; height: auto;" alt="Responsive image">
+            
+            <div class="container-fluid">
+                <h1 class="d-flex justify-content-center" id="welcome">
+                    C(onnect) R(esources) & U(nite) D(evelopers)
+                </h1>  
+            </div>
         
-        <div class="container" id="info">
+        <div class="container-fluid" id="info">
             <div class="row">
-                <div class="col-md-3">
-                    <h3>C(onnect) R(esources) & U(nite) D(evelopers)</h3>
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">What we do</h2>
                 </div>
                 <div class="col-md-9">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam vitae placeat perferendis, sapiente tempore laudantium velit praesentium eaque atque explicabo recusandae architecto beatae excepturi aut maiores iure itaque quibusdam exercitationem!
-                        Accusamus, dolore! Corrupti doloremque doloribus magni omnis nulla, nostrum provident aliquam culpa tempora, quia inventore vel perferendis ratione. Quae ab voluptatibus ipsa? Soluta neque vero, laudantium illum deleniti rem ad!
-                        Magnam quo, rem quod molestiae dignissimos incidunt cupiditate nihil, inventore enim commodi nostrum vero totam, provident tempora quia sunt ullam ipsam libero assumenda. Placeat dolore eveniet voluptatum quidem. A, cum.
-                        Obcaecati esse reiciendis id voluptatibus, odio delectus fugiat optio doloremque incidunt? Consequuntur optio iste, natus fuga iusto magni! Vitae facilis neque aliquam molestias praesentium dolore officiis, alias aperiam non consequatur.
-                        Eaque reiciendis nostrum dolorem incidunt, nesciunt qui molestiae temporibus labore harum maxime amet distinctio consectetur suscipit odit, eos sed veritatis odio modi. Modi officiis, quam corrupti nesciunt perferendis maxime mollitia.
-                    </p>
+                    <h2 class="highlight p-4">We give crud a new meaning.</h2>
+                    <p class="p-4">
+                        Our goal is to connect developers to resources and networking in their area. <br>We want to give users access to updated resources based on personal interests and professions.<br> 
+                        Create your profile below!
+                    </p> 
+                    <h4 class="p-4">
+                        let crud = <span class="highlight">
+                        'Connect Resources & Unite Developers'</span>;
+                    </h4>
+                        
                 </div>
             </div>
         </div>
@@ -31,7 +38,7 @@
             <i class="fas fa-user-circle" id="userlogin"></i>
             <h3>Create Profile</h3>
 
-        <div class="userlogin row justify-content-center text-center">
+        <div class="bodyText row justify-content-center text-center">
         <form action="./user/index" method="POST">
             <div class="row mb-2">
                 <label for="name">Name</label>
@@ -56,7 +63,7 @@
                 <option value="Back-End Developer">Back-End Developer</option>
             </select>
             </div>
-            <button class="btn mb-2 mt-2 btn-primary" type="submit">Create</button>
+            <button class="button btn mb-2 mt-2" type="submit">Create</button>
         </form>
             </div>
         </div>
