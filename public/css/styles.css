@@ -9,32 +9,47 @@
 }
 
 body {
-    /* background-color: var(--lightbrown); */
     font-family: 'Karla', sans-serif;
 }
 
-/* #nav {
-    background-color: var(--greygreen);
-} */
-/* nav.bg-light {
-    background-color: var(--brown)!important;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+p{
+    line-height: 30px;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+/* .bodyText {
+    font-size: 2rem;
 } */
 
+nav.bg-light {
+    /* background-color: aquamarine !important; */
+    opacity: 0.8;
+}
+
 .navbar a {
-    color: var(--lightbrown);
+    color: var(--dark);
 }
 
 #welcome {
-    padding: 10rem 2rem;
+    padding: 6rem 2rem;
 }
 
+/* .picture {
+        background: url(photos/people.jpg) center center cover no-repeat fixed;
+       } */
+
 #info {
-    background-color: #e9ecef;
-    padding: 10rem 2rem;
+    background-color: var(--lightbrown);
+    padding: 6rem 2rem;
 }
 
 #user {
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
 }
 
 /* form {
@@ -54,12 +69,13 @@ body {
 footer {
     width: 100%;
     bottom: 0;
-    position: fixed;
+    /* opacity: 0.; */
 }
  #userlogin {
      font-size: 10rem;
  }
 
+/*  
 @media (max-width: 992px) {
 
 }
@@ -68,4 +84,4 @@ footer {
 }
 @media (max-width: 576px) {
 
-}
+} */
