@@ -51,6 +51,17 @@ app.use('/auth', require('./controllers/auth'))
 
 app.use('/resources', require('./controllers/resourceCtrl'))
 
+// For testing layout
+// This shows user network
+app.get('/network', (req, res) => {
+  res.render('user/index');
+})
+
+// This shows user profile
+app.get('/network/show', (req, res) => {
+  res.render('user/show');
+})
+
 //* PORT
 const PORT = process.env.PORT || 4000
 //* Listener

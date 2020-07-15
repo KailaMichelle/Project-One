@@ -6,6 +6,7 @@
 <!-- Main -->
     <main>
 
+        <!-- Resource Message -->
         <div class="container-fluid" id="info">
             <div class="row">
                 <div class="col-md-3 text-center">
@@ -13,104 +14,91 @@
                 </div>
                 <div class="col-md-9">
                     <p class="p-4">
-                        See below for our favorite resources for all things software engineering.
+                        See below for our favorite resources for all things <span class="highlight">software engineering</span>.
                     </p> 
-                    <h4 class="p-4">
-                        <span>
-                        Any resources you'd like to <a href="/resources/new" id="resourceBtn">share?</a></span>
-                    </h4>
                 </div>
             </div>
         </div>
 
-        <div class="card-columns">
-            <div class="card">
-              <img class="card-img-top" src="photos/code.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title that wraps to a new line</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
+        <!-- Static Resources -->
+        <div class="card-columns p-4">
             <div class="card p-3">
               <blockquote class="blockquote mb-0 card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
+                <p>“Creativity is the goal. Coding is just to allow that. Creativity is in the front seat; technology is in the backseat. It is sort of the blend with both of these that you can do such powerful things now.”</p>
+                <p class="card-text mr-auto"><small class="text-muted">-Tim Cook</small></p>
               </blockquote>
             </div>
             <div class="card">
+                <img class="card-img-top" src="photos/inspiration.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Motivation</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            <div class="card">
               <img class="card-img-top" src="photos/computer.jpg" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">CSS</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text"><small class="text-muted">Updated 7/15/20</small></p>
               </div>
             </div>
-            <div class="card bg-primary text-white text-center p-3">
+            <div class="card bg-dark text-white text-center p-3">
               <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                <footer class="blockquote-footer">
-                  <small>
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat
+                </p>
               </blockquote>
             </div>
             <div class="card text-center">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">MDN</h5>
+                <p class="card-text">MDN is our favorite resource for documentation. 10/10 recommend.</p>
+                <p class="card-text"><a href="https://developer.mozilla.org/"><small class="text-muted">MDN web docs</small></a></p>
               </div>
             </div>
             <div class="card">
-              <img class="card-img" src="photos/code2.jpg" alt="Card image">
-            </div>
-            <div class="card p-3 text-right">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
+                <img class="card-img" src="photos/code2.jpg" alt="Card image">
+              </div>
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">"JavaScript.com is a resource built by the Pluralsight team for the JavaScript community."</p>
+                <p class="card-text"><a href="https://www.javascript.com"><small class="text-muted">javascript.com</small></a></p> 
               </div>
             </div>
           </div>
 
-
-        <div>
-            <h1>User Resources</h1>
-            <% resource.forEach(resource => { %>
-            <h4>
-                <a href="/resources/<%= resource._id %>">
-                <%= resource.name %>
-            </a>
-            </h4>
-
-            <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
-                <button class="button btn mb-2 mt-2" type="submit">Delete</button>
-            </form>
-  
-            <a href="/resources/<%= resource._id %>/edit">
-                <button class="button btn mb-2 mt-2">Edit</button>
-            </a>
-
-            <% }) %>
+<!-- User added Resources -->
+        <div class="container-fluid p-5" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">
+                        Check out resources added by our network members just like you!
+                    </h2>
+                </div>
+                <div class="col-md-6">
+                    <% resource.forEach(resource => { %>
+                    <div class="share card p-3 m-4">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="/resources/<%= resource._id %>" class="link"><%= resource.name %></a></h4>
+                            <p class="card-text"><%= resource.description %></p>
+                            <p class="card-text"><small class="text-muted">By: <%= resource.user %></small></p>
+                        </div>
+                    </div>
+                    <% }) %>    
+                </div>
+                <div class="col-md-3 text-center d-flex align-items-center justify-content-center">
+                    <div>
+                        <h4 class="p-4">
+                            Any resources you'd like to <a href="/resources/new" class="link">share?</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-
+    
     </main>
 
 <%- include('../partials/footer') %>
