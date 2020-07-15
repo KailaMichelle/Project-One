@@ -6,31 +6,43 @@
 <!-- Main -->
     <main>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <h2>Javascript</h2>
+        <div class="container-fluid vh-100" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">New Resource</h2>
+                </div>
+        <form action="/resources" method="POST">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">Type</label>
+                <input type="text" class="form-control" name="name"/> 
+              </div>
+              <div class="form-group col-md-6">
+                <label for="url">URL</label>
+                <input type="text" class="form-control" name="url"/> 
+              </div>
             </div>
-            <div class="col-md-9">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi doloremque sed necessitatibus explicabo, id numquam repellendus magni dolore consequatur dolorum, nulla illo commodi velit enim quasi dicta laborum aperiam.Enim corporis eius incidunt veritatis. Aliquid ex, ipsa et dolor similique ipsam placeat dolores quidem dicta numquam voluptate, voluptas, optio blanditiis consequuntur maiores rerum aut neque autem earum error. Velit!
-                </p>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="description">Description</label>
+                <textarea id="description" type="text" class="form-control" name="description"></textarea> 
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputUser">User</label>
+                <select id="inputUser" class="form-control">
+                  <option selected>Choose your name</option>
+                  <!-- TO DO -->
+                  <option>resource.user</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <button class="button btn mt-2" type="submit">Add Resource</button>
+              </div>
             </div>
+          </form>
         </div>
     </div>
-
-    <h1>New Resource</h1>
-
-    <form action="/resources" method="POST">
-        <label for="name">Type</label>
-        <input type="text" id="name" name="name"/>
-      </div>
-      <div>        
-        <label for="description">Description</label>
-        <textarea id="description" name="description"></textarea>
-      </div>
-      <button type="submit">Add Resource</button>
-    </form>
-
+        
     </main>
 
 <%- include('../partials/footer') %>
