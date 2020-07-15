@@ -75,12 +75,6 @@ nav.bg-light {
     padding: 6rem 2rem;
 }
 
-
-/* form {
-    border: solid black 1px;
-    margin: 10px;
-} */
-
 #footer a {
     color: #FD521F;
     text-decoration: none;
@@ -95,16 +89,29 @@ footer {
     bottom: 0;
     position: fixed;
 }
- #userlogin {
-     font-size: 10rem;
-     color: #EEEEEE;
- }
+#userlogin {
+    font-size: 10rem;
+    color: #EEEEEE;
+}
 
 #resourceBtn {
     color: #FD521F;
 }
 
 #resourceBtn:hover {
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
+.share {
+    background-color: #F4F7F6;
+}
+
+.link {
+    color: #FD521F;
+}
+
+.link:hover {
     color: #2D2D2D;
     text-decoration: none;
 }

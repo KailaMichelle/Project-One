@@ -13,6 +13,13 @@
         <p>
           <%= resource.description %>
         </p>
+        <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
+          <button class="button btn mb-2 mt-2" type="submit">Delete</button>
+      </form>
+
+      <a href="/resources/<%= resource._id %>/edit">
+          <button class="button btn mb-2 mt-2">Edit</button>
+      </a>
         
 </main>
         <%- include('../partials/footer') %>
