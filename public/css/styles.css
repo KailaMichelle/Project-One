@@ -49,7 +49,7 @@ nav.bg-light {
     color: #2D2D2D !important;
 }
 
-#welcome {
+.welcome {
     padding: 6rem 2rem;
     color: #FD521F;
 }
@@ -114,6 +114,10 @@ footer {
 .link:hover {
     color: #2D2D2D;
     text-decoration: none;
+}
+
+.network {
+    color: #FD521F;
 }
 
 /*  

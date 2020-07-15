@@ -71,36 +71,34 @@
           </div>
 
 <!-- User added Resources -->
-    <div class="container-fluid p-5" id="info">
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <h2 class="p-4">
-                    Check out resources added by our network members just like you!
-                </h2>
-            </div>
-            <div class="col-md-6">
-                <% resource.forEach(resource => { %>
-                <div class="share card p-3 m-4">
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="/resources/<%= resource._id %>" class="link"><%= resource.name %></a></h4>
-                        <p class="card-text"><%= resource.description %></p>
-                        <p class="card-text"><small class="text-muted">By: <%= resource.user %></small></p>
-                    </div>
+        <div class="container-fluid p-5" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">
+                        Check out resources added by our network members just like you!
+                    </h2>
                 </div>
-                <% }) %>    
-            </div>
-            <div class="col-md-3 text-center d-flex align-items-center justify-content-center">
-                <div>
-                    <h4 class="p-4">
-                        Any resources you'd like to <a href="/resources/new" class="link">share?</a>
-                    </h4>
+                <div class="col-md-6">
+                    <% resource.forEach(resource => { %>
+                    <div class="share card p-3 m-4">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="/resources/<%= resource._id %>" class="link"><%= resource.name %></a></h4>
+                            <p class="card-text"><%= resource.description %></p>
+                            <p class="card-text"><small class="text-muted">By: <%= resource.user %></small></p>
+                        </div>
+                    </div>
+                    <% }) %>    
+                </div>
+                <div class="col-md-3 text-center d-flex align-items-center justify-content-center">
+                    <div>
+                        <h4 class="p-4">
+                            Any resources you'd like to <a href="/resources/new" class="link">share?</a>
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
+    
     </main>
 
 <%- include('../partials/footer') %>

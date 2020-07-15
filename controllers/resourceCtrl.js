@@ -78,8 +78,6 @@ router.delete('/:id', (req, res) => {
       res.redirect('/resources');
     });
 });
-
-
   
 
 module.exports = router
