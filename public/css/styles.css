@@ -33,6 +33,16 @@ p {
     color: var(--background);
 }
 
+.buttonTwo {
+    background-color: var(--orange);
+    color: var(--background);
+}
+
+.buttonTwo:hover {
+    background-color: var(--background);
+    color: var(--orange);
+}
+
 .highlight {
     color: var(--orange);
 }

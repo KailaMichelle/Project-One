@@ -6,32 +6,42 @@
 <!-- Main -->
     <main>
 
-        <div class="container-fluid vh-100" id="info">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <h2 class="p-4"><%= resource.name %></h2>
-                </div>
-                <div class="col-md-9">
-                    <p class="p-4">
-                      <%= resource.description %> 
-                    </p> 
-                    <p class="p-4">
-                      <a href="<%= resource.link %>"><%= resource.link %> </a>
-                    </p>
-                    <p class="p-4">
-                      By:<%= resource.user %> 
-                    </p>  
-                    <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
-                      <button class="button btn mb-2 mt-2" type="submit">Delete</button>
-                  </form>
-            
-                  <a href="/resources/<%= resource._id %>/edit">
-                      <button class="button btn mb-2 mt-2">Edit</button>
-                  </a>
-                    
+      <div class="info container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+              <img src="/photos/code.jpg" class="img-fluid max-width: 100%; height: auto;" alt="Responsive image">
+            </div>
+  <div class="col-md-8">
+              <div class="col-5">
+                  <h2 class="highlight"><%= resource.name %></h2>
+              </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <p class="p-4">
+                          <%= resource.description %> 
+                        </p> 
+                        <p class="p-4">
+                          <a href="<%= resource.link %>"><%= resource.link %> </a>
+                        </p>
+                        <p class="p-4">
+                          By:<%= resource.user %> 
+                        </p>
+                      </div>
+                    </div>
+                    <div class="container-fluid p-4">
+                      <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
+                        <button class="buttonTwo btn" type="submit">Delete</button>
+                    </form>
+                    <a href="/resources/<%= resource._id %>/edit">
+                        <button class="buttonTwo btn">Edit</button>
+                    </a> 
                 </div>
             </div>
-        </div>
+      </div>
+  </div>
+</div>
+
+        
 
         
 </main>
