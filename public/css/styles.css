@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@400;500;700&display=swap');
 
 :root {
-    --dark: #4C5361;
-    --brown: #96908E;
-    --lightbrown: #DED6D3; 
-    --greygreen: #A4ACB0;
-    --bluegrey: #7C8593;
+    --orange: #FD521F;
+    --background: #F4F7F6;
+    --lightgrey: #EEEEEE; 
+    --dark: #2D2D2D;
 }
 
 body {
     font-family: 'Karla', sans-serif;
-    color: #2D2D2D;
+    color: var(--dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,12 +23,12 @@ p{
 }
 
 .button {
-    background-color: #EEEEEE;
+    background-color: var(--lightgrey);
 }
 
 .button:hover {
-    background-color: #2D2D2D;
-    color: #F4F7F6;
+    background-color: var(--dark);
+    color: var(--background);
 }
 
 /* .bodyText {
@@ -37,38 +36,38 @@ p{
 } */
 
 nav.bg-light {
-    background-color: #F4F7F6 !important;
+    background-color: var(--background) !important;
     opacity: 0.8;
 }
 
 .navbar a {
-    color: #FD521F !important;
+    color: var(--orange) !important;
 }
 
 .navbar a:hover {
-    color: #2D2D2D !important;
+    color: var(--dark) !important;
 }
 
 .welcome {
     padding: 6rem 2rem;
-    color: #FD521F;
+    color: var(--orange);
 }
 
-.blue {
+/* .blue {
     color: #82CEED;
-}
+} */
 
 /* .picture {
         background: url(photos/people.jpg) center center cover no-repeat fixed;
        } */
 
 #info {
-    background-color:#EEEEEE;
+    background-color:var(--lightgrey);
     padding: 6rem 2rem;
 }
 
 .highlight {
-    color: #FD521F;
+    color: var(--orange);
 }
 
 #user {
@@ -76,12 +75,12 @@ nav.bg-light {
 }
 
 #footer a {
-    color: #FD521F;
+    color: var(--orange);
     text-decoration: none;
 }
 
 #footer a:hover {
-    color: #2D2D2D;
+    color: var(--dark);
 }
 
 footer {
@@ -91,34 +90,41 @@ footer {
 }
 #userlogin {
     font-size: 10rem;
-    color: #EEEEEE;
+    color: var(--lightgrey);
 }
 
 #resourceBtn {
-    color: #FD521F;
+    color: var(--orange);
 }
 
 #resourceBtn:hover {
-    color: #2D2D2D;
+    color: var(--dark);
     text-decoration: none;
 }
 
 .share {
-    background-color: #F4F7F6;
+    background-color: var(--background);
 }
 
 .link {
-    color: #FD521F;
+    color: var(--orange);
 }
 
 .link:hover {
-    color: #2D2D2D;
+    color: var(--dark);
     text-decoration: none;
 }
 
 .network {
-    color: #FD521F;
+    color: var(--orange);
 }
+
+.networkUser {
+    background-color:var(--lightgrey);
+    padding: 6rem 2rem;
+    border-bottom: var(--orange) solid 1px;
+}
+
 
 /*  
 @media (max-width: 992px) {
