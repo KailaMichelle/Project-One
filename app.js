@@ -53,6 +53,11 @@ app.use('/auth', require('./controllers/auth'))
 app.use('/resources', require('./controllers/resourceCtrl'))
 app.use('/network', require('./controllers/userCtrl'))
 
+// 404 Route
+app.get('*', (req, res) => {
+  res.render('error/404');
+})
+
 //* PORT
 const PORT = process.env.PORT || 4000
 //* Listener
