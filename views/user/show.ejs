@@ -9,7 +9,7 @@
         <div class="d-flex justify-content-center">
             <div class="container mt-5 mb-3">
                 <h1 class="network">
-                    Meet Kaila!
+                    Meet <%= user.name %>!
                 </h1>  
             </div>
         </div>
@@ -19,12 +19,13 @@
             <div class="networkUser container mb-3">
                 <div class="row  ml-5">
                     <div class="col-4 text-center">
-                        <img class="rounded-circle" src="photos/code.jpg" alt="image" width="180" height="180">
+                        <img class="rounded-circle" src="/photos/code.jpg" alt="image" width="180" height="180">
                     </div>
-                    <div class="col-2">
-                        <h2 class="">Kaila</h2>
-                        <p class="">Profession</p>
-                        <p><a href="mailto:kaila22@hotmail.com" class="link">Contact Kaila!</a></p>
+                    <div class="col">
+                        <h2 class=""><%= user.profession %></h2>
+                        <p class="">Lives in <%= user.location %></p>
+                        <p class="">Likes: <%= user.interests %></p>
+                        <p><a href="mailto:<%= user.email %>" class="link">Contact Kaila!</a></p>
                     </div>
                 </div>
             </div>

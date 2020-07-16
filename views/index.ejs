@@ -39,7 +39,7 @@
             <h3>Create Profile</h3>
 
         <div class="bodyText row justify-content-center text-center">
-        <form action="./user/index" method="POST">
+        <form action="/network" method="POST">
             <div class="row mb-2">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" name="name"/>
@@ -59,13 +59,13 @@
             <div class="row mb-2">
             <label for="profession">Profession</label>
             <select class="form-control" name="profession">
-                <option placeholder="select one" value="Front-End Developer">Front-End Developer</option>
+                <option placeholder="select one" value="Select"></option>
+                <option value="Front-End Developer">Front-End Developer</option>
                 <option value="Back-End Developer">Back-End Developer</option>
+                <option value="Full-Stack Developer">Full-Stack Developer</option>
             </select>
             </div>
-            <a href="/network/new">
                 <button class="button btn mb-2 mt-2" type="submit">Create</button>
-            </a>
         </form>
             </div>
         </div>
