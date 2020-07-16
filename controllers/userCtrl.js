@@ -1,9 +1,9 @@
-const express = require('express')
-const { ensureAuth, ensureGuest } = require('../middleware/auth')
-const router = express.Router()
-const User = require('../models/User')
-const Resource = require('../models/Resource')
+express = require("express");
+const router = express.Router();
 
+const { ensureAuth, ensureGuest } = require("../middleware/auth");
+const User = require("../models/User");
+const Resource = require("../models/");
 
 // User Network
 router.get('/', (req, res) => {
@@ -19,17 +19,19 @@ router.get('/', (req, res) => {
   })
 
 // Show Profile
-// router.get('/:id', (req, res) => {
-//     User.findById(req.params.id)
-//     .populate({path: 'resources'})
-//     .exec((err, showUser) => {
-//         if (err) return console.log(err);
+router.get('/:id', (req, res) => {
+    User.findById(req.params.id)
+    .populate({path: 'resources'})
+    .exec((err, showUser) => {
+        if (err) return console.log(err);
   
-//       res.render('user/show', {
-//         user: showUser,
-//       });      
-//     });
-//   });
+      res.render('user/show', {
+        user: showUser,
+      });      
+    });
+  });
+
+
 router.get('/:id', (req, res) => {
     User.findById(req.params.id, (err, showUser) => {
       if (err) return console.log(err);

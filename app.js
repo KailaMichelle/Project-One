@@ -21,7 +21,7 @@ app.set('view engine', 'ejs')
 //* Session Middleware (need to be above Passport)
 app.use(
   session({
-    secret: 'WebApp',
+    secret: process.env.SECRETWORD,
     resave: false, // if nothing changed in session don't save
     saveUninitialized: false, // don't create a session until something is store
     store: new MongoStore({ mongooseConnection: mongoose.connection })
@@ -44,7 +44,13 @@ app.use(express.static(__dirname + '/public'))
 
 
 // ----- Routes -----
-app.use('/', require('./controllers/index'))
+app.get('/', (req, res) => {
+  res.render('index')
+})
+
+app.get("/return", (req, res) => {
+  res.redirect('network');
+});
 
 //* Auth Routes
 app.use('/auth', require('./controllers/auth'))
