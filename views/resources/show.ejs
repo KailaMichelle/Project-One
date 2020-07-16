@@ -14,19 +14,19 @@
             <div class="col-5">
               <h2 class="highlight"><%= resource.name %></h2>
             </div>
-          <div class="row">
-            <div class="col-md-9">
-              <p class="p-4">
-                <%= resource.description %> 
-              </p> 
-              <p class="p-4">
-                <a href="<%= resource.link %>"><%= resource.link %> </a>
-              </p>
-              <p class="p-4">
-                By: <a href="/network/<%= user._id %>"><%= user.name %></a>
-              </p>
+            <div class="row">
+              <div class="col-md-9">
+                <p class="p-4">
+                  <%= resource.description %> 
+                </p> 
+                <p class="p-4">
+                  <a href="<%= resource.link %>"><%= resource.link %> </a>
+                </p>
+                <p class="p-4">
+                  By: <a href="/network/<%= user._id %>"><%= user.name %></a>
+                </p>
+              </div>
             </div>
-          </div>
             <div class="container-fluid p-4">
               <form style="display: inline;" action="/resources/<%= resource._id %>?_method=DELETE" method="POST">
                 <button class="buttonTwo btn" type="submit">Delete</button>
@@ -38,6 +38,7 @@
           </div>
         </div>
       </div>
+      
     </main>
   <%- include('../partials/footer') %>
   <%- include('../partials/plugins') %>

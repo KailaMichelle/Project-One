@@ -18,8 +18,14 @@ router.get("/login", (req, res) => {
 });
 
 // After Sign In
-router.get("/auth/google/callback", (req, res) => {
-  res.render("network");
+router.get("/google/callback", (req, res) => {
+  User.find({}, (err, allUsers) => {
+    if (err) return console.log(err);
+    console.log(allUsers);
+    res.render('user/index', {
+      user: allUsers,
+    });
+  });
 });
 
 // * Log Out User
