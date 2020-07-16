@@ -86,8 +86,12 @@ nav.bg-light {
     padding: 6rem 2rem;
 }
 
+.signup {
+    padding: 6rem 2rem;
+}
+
 /* User Specific */
-#user {
+.user {
     padding: 6rem 2rem;
 }
 
