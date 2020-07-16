@@ -11,16 +11,24 @@ router.get('/', ensureGuest, (req, res) => {
   res.render('index')
 })
 
+router.get('/login', (req, res) => {
+    res.render('login');
+  })
+
+  router.get('/signup', (req, res) => {
+    res.render('signup');
+  })
+
 
 //TODO from main page
 // DashBoard Route : GET
-router.get('/login', ensureAuth, (req, res) => {
-  //(dashboard)should be after log in
-  console.log(req.user)
-  res.render('login', {
-    name: req.user.firstName
-  })
-})
+// router.get('/login', ensureAuth, (req, res) => {
+//   //(dashboard)should be after log in
+//   console.log(req.user)
+//   res.render('login', {
+//     name: req.user.firstName
+//   })
+// })
 //TODO  /resources
 // router.get('/resource', ensureAuth, async (req, res) => {
 //   try {
