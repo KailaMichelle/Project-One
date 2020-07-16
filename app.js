@@ -49,18 +49,9 @@ app.use('/', require('./controllers/index'))
 //* Auth Routes
 app.use('/auth', require('./controllers/auth'))
 
+// Controllers
 app.use('/resources', require('./controllers/resourceCtrl'))
-
-// For testing layout
-// This shows user network
-app.get('/network', (req, res) => {
-  res.render('user/index');
-})
-
-// This shows user profile
-app.get('/network/show', (req, res) => {
-  res.render('user/show');
-})
+app.use('/network', require('./controllers/userCtrl'))
 
 //* PORT
 const PORT = process.env.PORT || 4000
