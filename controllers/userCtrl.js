@@ -3,7 +3,8 @@ const router = express.Router();
 
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const User = require("../models/User");
-const Resource = require("../models/");
+const Resource = require("../models/Resource");
+// const GUser = require('../models/GUser');
 
 // User Network
 router.get('/', (req, res) => {
@@ -41,6 +42,17 @@ router.get('/:id', (req, res) => {
       });
     });
   });
+
+// GUser route
+// router.get('/googleuser/:id', (req, res) => {
+//   GUser.findById(req.params.id, (err, showUser) => {
+//     if (err) return console.log(err);
+
+//     res.render('guserCreate', {
+//       user: showUser,
+//     });
+//   });
+// });
 
 // Create User Profile
 router.post('/', (req, res) => {

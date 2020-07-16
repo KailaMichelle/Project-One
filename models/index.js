@@ -1,7 +1,5 @@
 //=========== DB ===========
 const mongoose = require("mongoose");
-const Resource = require("./Resource");
-const User = require('./User');
 
 const connectDb = async () => {
   try {
@@ -20,10 +18,12 @@ const connectDb = async () => {
 
 module.exports = {
   Resource: require('./Resource'),
-  User: require('./User')
+  User: require('./User'),
 }
 
 module.exports = connectDb;
+
+
 
 
 
