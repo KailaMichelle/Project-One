@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const GUserSchema = new mongoose.Schema(
   {
     googleId: {
@@ -29,4 +30,6 @@ const GUserSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("GUser", GUserSchema);
+
+
 
