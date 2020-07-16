@@ -1,28 +1,39 @@
 const express = require("express");
-const passport = require("passport");
 const router = express.Router();
-
-//* Auth with google GET to /auth/google
-// Scrope of whatever is in the profile
+const passport = require("passport");
+require("../models");
+router.use(express.urlencoded({ extended: false }));
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
-
-//* Goggle Auth Callback GET to /auth/google/callback
-router.get(
-  "google/callback",
-  passport.authenticate("google", {
-    failureRedirect: "/", // ! if failure redirect to HOME/LOGIN [root]***
-  }),
-  (req, res) => {
-    res.redirect("/dashboard"); // ! if sucess redirect to user/dashboard ***
-  }
-);
-// * Log Out User Route:: /auth/logout
+router.get("/signup", (req, res) => {
+  res.render("./user/register");
+});
+//? Login Route
+router.get("/login", (req, res) => {
+  res.redirect("user/login");
+});
+router.post("/signup", (req, res) => {
+  User.create(req.body, (err, newUser) => {
+    if (err) return console.log(err);
+    res.redirect("user/register");
+  });
+});
+router.get("/auth/google/callback", (req, res) => {
+  res.render("user/show");
+});
+// * Log Out User
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/"); // To homepage
 });
 
-//? with the passport middleware once we log in we will have log out method
-// ? in request object so we can just call that
+// GOOGLE AUTH
+router.get("/login", (req, res) => {
+  res.render("./user/login");
+});
+
+router.get("auth/google", (req, res) => {
+  req.render("user/login");
+});
+
 
 module.exports = router;

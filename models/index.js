@@ -1,6 +1,7 @@
 //=========== DB ===========
 const mongoose = require("mongoose");
 const Resource = require("./Resource");
+const User = require('./User');
 
 const connectDb = async () => {
   try {
