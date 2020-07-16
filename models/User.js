@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Resource = require("./Resource");
+const Resource = require('./Resource');
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -17,12 +17,10 @@ const UserSchema = new mongoose.Schema({
   interests: {
     type: String,
   },
-  resources: [
-    {
+  resources: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Resource",
-    }
-  ],
+      ref: 'Resource', //this references the model
+    }],
   // googleId: {
   //   type: String,
   //   required: true,

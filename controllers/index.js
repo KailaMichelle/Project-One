@@ -36,8 +36,4 @@ router.get('/login', ensureAuth, (req, res) => {
 //   }
 // })
 
-
-//TODO user/index.ejs
-//TODO  contacts
-
 module.exports = router

@@ -12,15 +12,7 @@ const resourceSchema = new mongoose.Schema(
     link: {
       type: String
     },
-    user: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Resource'
-      }
-    ]
-  },
-  { timestamps: true }
-)
+  }, { timestamps: true });
 
 const Resource = mongoose.model('Resource', resourceSchema)
 

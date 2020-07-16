@@ -12,7 +12,7 @@
               </div>
     <div class="col-md-8">
                 <div class="col-5">
-                    <h2 class="highlight">New Resource</h2>
+                    <h2 class="highlight">Add Resource</h2>
                 </div>
         <form action="/resources" method="POST">
             <div class="form-row p-3">
@@ -22,7 +22,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="link">URL</label>
-                <input type="text" class="form-control" name="link"/> 
+                <input type="url" class="form-control" name="url" id="url" placeholder="https://example.com"
+                pattern="https://.*" required/> 
               </div>
             </div>
             <div class="form-row p-3">
@@ -31,11 +32,12 @@
                 <textarea id="description" type="text" class="form-control" name="description"></textarea> 
               </div>
               <div class="form-group col-md-4">
-                <label for="inputUser">User</label>
-                <select id="inputUser" class="form-control">
+                <label for="userID">User</label>
+                <select id="userID" name="userID" class="form-control">
                   <option selected>Choose your name</option>
-                  <!-- TO DO -->
-                  <option>resource.user</option>
+                  <% user.forEach(user => { %>
+                  <option value="<%= user._id %>"><%= user.name %></option>
+                <% }) %>
                 </select>
               </div>
               <div class="form-group col-md-2">
