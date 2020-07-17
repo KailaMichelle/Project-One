@@ -60,6 +60,11 @@ p {
     color: var(--lightgrey);
 }
 
+.bold {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
 /* NAV */
 nav.bg-light {
     background-color: var(--background) !important;
