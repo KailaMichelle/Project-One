@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 require("../models");
+const User = require('../models/User')
 
 router.use(express.urlencoded({ extended: false }));
 
