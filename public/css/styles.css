@@ -92,18 +92,38 @@ nav.bg-light {
 
 /* User Specific */
 .user {
-    padding: 5rem 2rem;
     background-color: var(--orange);
+    border: outset;
+    border-radius: 2rem;
+    border-color: var(--lightgrey);
 }
 
 .signup {
-    padding: 5rem;
     background-color: var(--orange);
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+.loginpage {
+    padding: 4rem;
+    background-color: var(--orange);
+    border-radius: 1rem;
+}
+
+.greybackground {
+    background-color: var(--lightgrey);
+    border-radius: 1rem;
 }
 
 #userlogin {
     font-size: 10rem;
     color: var(--lightgrey);
+}
+
+.userlogin {
+    font-size: 10rem;
+    color: var(--lightgrey);
+    margin-top: 4rem;
 }
 
 .network {
@@ -157,7 +177,7 @@ nav.bg-light {
     color: var(--dark);
 }
 
-footer {
+#footer {
     width: 100%;
     bottom: 0;
     position: fixed;
