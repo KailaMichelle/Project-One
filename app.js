@@ -46,7 +46,20 @@ app.use(express.static(__dirname + '/public'))
 // ----- Routes -----
 app.get('/', (req, res) => {
   res.render('index')
-})
+});
+
+// Footer Nav Routes
+app.get('/about', (req, res) => {
+  res.render('about')
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact')
+});
+
+app.get('/subscribe', (req, res) => {
+  res.render('subscribe')
+});
 
 app.get("/return", (req, res) => {
   res.redirect('network');

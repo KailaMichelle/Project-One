@@ -65,6 +65,9 @@ p {
     font-weight: 500;
 }
 
+.justify {
+    font-size: 1.5rem;
+}
 /* NAV */
 nav.bg-light {
     background-color: var(--background) !important;
