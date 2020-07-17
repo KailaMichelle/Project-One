@@ -91,3 +91,7 @@ As a developer I would like to have access to upcoming networking events and wor
 D E V E L O P E R S 
 As a developer I would like a targeted site that focuses soley on relevant developer related topics. 
 
+
+![picture](public/photos/wireframe/W1.jpg)
+
+

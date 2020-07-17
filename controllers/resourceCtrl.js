@@ -61,14 +61,19 @@ router.post('/', (req, res) => {
 
 // Edit Resource
 router.get('/:id/edit', (req, res) => {
+  User.find({}, (err, allUsers) => {
+    if (err) return console.log(err);
+    console.log(allUsers);
   Resource.findById(req.params.id, (err, edit) => {
       if (err) return console.log(err);
 
       res.render('resources/edit', { //referring view
         resource: edit,
+        user: allUsers,
       });
     });
   });
+});
 
   // Update Resource
 router.put('/:id', (req, res) => {
