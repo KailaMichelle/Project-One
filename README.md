@@ -1,9 +1,9 @@
-C R U D 
-Connect - Resources & Unite - Developers
+# Crud
+## Connect - Resources & Unite - Developers
 
 Our goal is to create a website that connects developers to resources and networking in their area. We want to give users access to updated resources based on personal interests and professions.
 
-T E C H N O L O G I E S 
+## Technologies 
 Express
 Node.js - EJS - Nodemon
 MongoDB
@@ -11,13 +11,13 @@ Mongoose
 HTML
 CSS - Bootstrap
 
-F E A T U R E S 
-HOMEPAGE: 
+## Features
+#### HOMEPAGE: 
 -Welcome information
 -Nav (contacts, resources calendar)
 -Footer (about us, contact, social links)
 
-CONTACTS:
+#### CONTACTS:
 -User profiles (FULL CRUD)
     -Name
     -Location
@@ -25,18 +25,18 @@ CONTACTS:
     -Profession
     -Interests/Passions
 
-RESOURCES:
+#### RESOURCES:
 - Websites
 - Networking Events / Workshops
 - Documention
 
-CALENDAR: (Depending on time - FULL CRUD)
+#### CALENDAR: (Depending on time - FULL CRUD)
 - Static Calendar 
     - Bonus (user can add, edit, & delete events)
 
-U S E R - S T O R Y 
+## User Story
 
-USER: 
+### USER: 
 (Sprint 1)
 
 User will navigate to Hompage and be able to create a profile with basic user information
@@ -46,7 +46,7 @@ User will navigate to Hompage and be able to create a profile with basic user in
         -contacts
         -calendar
 
-INFORMATION:
+### INFORMATION:
 (Sprint 2)
 
 User functionality to access resources, contacts, calendar. 
@@ -59,7 +59,7 @@ User functionality to access resources, contacts, calendar.
     FULL CRUD:
         -resources
 
-STYLE: 
+### STYLE: 
 (Sprint 3)
 
 User should have access: 
@@ -68,7 +68,7 @@ User should have access:
     -seamless functionality
     -site information
 
-BONUS: 
+### BONUS: 
 (Sprint 4)
 
 -Full crud on calendar
@@ -79,15 +79,28 @@ BONUS:
 -Add CSS animation and JS effects
 
 
-C O N N E C T 
+### Connect
 As a developer I want to stay connected to other developers in my area with similar interests. 
 
-R E S O U R C E S 
+### Resources
 I want to have daily access to resources and their updates in addition to staying informed on current technical practices. I would like to have access to documentation and syntax.
 
-U N I T E 
+### Unite 
 As a developer I would like to have access to upcoming networking events and workshops. 
 
-D E V E L O P E R S 
+### Developers 
 As a developer I would like a targeted site that focuses soley on relevant developer related topics. 
+
+## Wireframe and ERD
+![picture](public/photos/wireframe/W1.jpg)
+![picture](public/photos/wireframe/W11.jpg)
+![picture](public/photos/wireframe/W2.jpg)
+![picture](public/photos/wireframe/W3.jpg)
+![picture](public/photos/wireframe/W4.jpg)
+![picture](public/photos/wireframe/W5.jpg)
+![picture](public/photos/wireframe/W7.jpg)
+![picture](public/photos/wireframe/W8.jpg)
+![picture](public/photos/wireframe/W9.jpg)
+![picture](public/photos/wireframe/W10.jpg)
+
 
