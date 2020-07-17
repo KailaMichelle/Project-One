@@ -105,9 +105,22 @@ nav.bg-light {
 }
 
 .networkUser {
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.profile {
+    padding: 2rem 7rem;
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.users {
+    margin: 4rem;
+}
+
+.userProfile {
     background-color:var(--lightgrey);
-    padding: 6rem 2rem;
-    border-bottom: var(--orange) solid 1px;
 }
 
 /* Resources */
