@@ -4,12 +4,14 @@
 Our goal is to create a website that connects developers to resources and networking in their area. We want to give users access to updated resources based on personal interests and professions.
 
 ## Technologies 
-Express
+Express - Express Session 
 Node.js - EJS - Nodemon
 MongoDB
-Mongoose
+Mongoose - Connect Mongo
 HTML
 CSS - Bootstrap
+Passport - Passport Google Auth
+
 
 ## Features
 #### HOMEPAGE: 
@@ -36,8 +38,8 @@ CSS - Bootstrap
 
 ## User Story
 
-### USER: 
-(Sprint 1)
+#### USER: 
+*(Sprint 1)*
 
 User will navigate to Hompage and be able to create a profile with basic user information
 
@@ -46,8 +48,8 @@ User will navigate to Hompage and be able to create a profile with basic user in
         -contacts
         -calendar
 
-### INFORMATION:
-(Sprint 2)
+#### INFORMATION:
+*(Sprint 2)*
 
 User functionality to access resources, contacts, calendar. 
 
@@ -59,8 +61,8 @@ User functionality to access resources, contacts, calendar.
     FULL CRUD:
         -resources
 
-### STYLE: 
-(Sprint 3)
+#### STYLE: 
+*(Sprint 3)*
 
 User should have access: 
     -user friendly site 
@@ -68,8 +70,8 @@ User should have access:
     -seamless functionality
     -site information
 
-### BONUS: 
-(Sprint 4)
+#### BONUS: 
+*(Sprint 4)*
 
 -Full crud on calendar
 -Full crud on user profile
