@@ -74,6 +74,6 @@ app.get('*', (req, res) => {
 })
 
 //* PORT
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 //* Listener
 app.listen(PORT, console.log(`Sever is running on port:${PORT}`))
