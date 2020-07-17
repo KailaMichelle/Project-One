@@ -56,10 +56,14 @@ p {
     text-decoration: none;
 }
 
+.grey {
+    color: var(--lightgrey);
+}
+
 /* NAV */
 nav.bg-light {
     background-color: var(--background) !important;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .navbar a {
@@ -86,13 +90,15 @@ nav.bg-light {
     padding: 6rem 2rem;
 }
 
-.signup {
-    padding: 6rem 2rem;
-}
-
 /* User Specific */
 .user {
     padding: 5rem 2rem;
+    background-color: var(--orange);
+}
+
+.signup {
+    padding: 5rem;
+    background-color: var(--orange);
 }
 
 #userlogin {
