@@ -42,17 +42,6 @@ router.get('/:id', (req, res) => {
   });
 });
 
-// router.get('/:id', (req, res) => {
-//   Resource.findById(req.params.id, (err, showResource) => {
-//     if (err) return console.log(err);
-
-//     res.render('resources/show', {
-//       resource: showResource,
-//     });
-//   });
-// });
-
-
 // Create Resource
 router.post('/', (req, res) => {
   
@@ -69,16 +58,6 @@ router.post('/', (req, res) => {
     });
   });
 });
-
-// router.post('/', (req, res) => {
-  
-//   Resource.create(req.body, (err, newResource) => {
-//     if(err) return console.log(err);
-//     console.log(newResource);
-
-//     res.redirect('resources');
-//   });
-// });
 
 // Edit Resource
 router.get('/:id/edit', (req, res) => {
