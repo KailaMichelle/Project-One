@@ -4,12 +4,14 @@
 Our goal is to create a website that connects developers to resources and networking in their area. We want to give users access to updated resources based on personal interests and professions.
 
 ## Technologies 
-Express
+Express - Express Session 
 Node.js - EJS - Nodemon
 MongoDB
-Mongoose
+Mongoose - Connect Mongo
 HTML
 CSS - Bootstrap
+Passport - Passport Google Auth
+
 
 ## Features
 #### HOMEPAGE: 
