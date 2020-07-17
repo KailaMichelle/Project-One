@@ -23,6 +23,9 @@ const UserSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Resource', //this references the model
     }],
+  photo: [{
+    img: ''
+  }],
 });
 
 const User = mongoose.model('User', UserSchema)
