@@ -43,17 +43,6 @@ router.get('/:id', (req, res) => {
     });
   });
 
-// GUser route
-// router.get('/googleuser/:id', (req, res) => {
-//   GUser.findById(req.params.id, (err, showUser) => {
-//     if (err) return console.log(err);
-
-//     res.render('guserCreate', {
-//       user: showUser,
-//     });
-//   });
-// });
-
 // Create User Profile
 router.post('/', (req, res) => {
     User.create(req.body, (err, newUser) => {

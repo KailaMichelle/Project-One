@@ -56,10 +56,22 @@ p {
     text-decoration: none;
 }
 
+.grey {
+    color: var(--lightgrey);
+}
+
+.bold {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.justify {
+    font-size: 1.5rem;
+}
 /* NAV */
 nav.bg-light {
     background-color: var(--background) !important;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .navbar a {
@@ -86,13 +98,29 @@ nav.bg-light {
     padding: 6rem 2rem;
 }
 
-.signup {
-    padding: 6rem 2rem;
-}
-
 /* User Specific */
 .user {
-    padding: 5rem 2rem;
+    background-color: var(--orange);
+    border: outset;
+    border-radius: 2rem;
+    border-color: var(--lightgrey);
+}
+
+.signup {
+    background-color: var(--orange);
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+.loginpage {
+    padding: 4rem;
+    background-color: var(--orange);
+    border-radius: 1rem;
+}
+
+.greybackground {
+    background-color: var(--lightgrey);
+    border-radius: 1rem;
 }
 
 #userlogin {
@@ -100,14 +128,33 @@ nav.bg-light {
     color: var(--lightgrey);
 }
 
+.userlogin {
+    font-size: 10rem;
+    color: var(--lightgrey);
+    margin-top: 4rem;
+}
+
 .network {
     color: var(--orange);
 }
 
 .networkUser {
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.profile {
+    padding: 2rem 7rem;
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.users {
+    margin: 4rem;
+}
+
+.userProfile {
     background-color:var(--lightgrey);
-    padding: 6rem 2rem;
-    border-bottom: var(--orange) solid 1px;
 }
 
 /* Resources */
@@ -138,7 +185,7 @@ nav.bg-light {
     color: var(--dark);
 }
 
-footer {
+#footer {
     width: 100%;
     bottom: 0;
     position: fixed;
