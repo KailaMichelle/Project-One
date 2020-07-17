@@ -93,16 +93,14 @@ As a developer I would like a targeted site that focuses soley on relevant devel
 
 ## Wireframe and ERD
 ![picture](public/photos/wireframe/W1.jpg)
+![picture](public/photos/wireframe/W11.jpg)
 ![picture](public/photos/wireframe/W2.jpg)
 ![picture](public/photos/wireframe/W3.jpg)
 ![picture](public/photos/wireframe/W4.jpg)
 ![picture](public/photos/wireframe/W5.jpg)
-![picture](public/photos/wireframe/W6.jpg)
 ![picture](public/photos/wireframe/W7.jpg)
 ![picture](public/photos/wireframe/W8.jpg)
 ![picture](public/photos/wireframe/W9.jpg)
 ![picture](public/photos/wireframe/W10.jpg)
-![picture](public/photos/wireframe/W11.jpg)
-![picture](public/photos/wireframe/W12.jpg)
 
 
